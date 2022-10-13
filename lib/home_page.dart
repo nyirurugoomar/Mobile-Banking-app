@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+int _selectedIndex = 0;
+void _navigateBottomBar(int index) {}
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -9,32 +12,24 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-              backgroundColor: Colors.blue[800],
               icon: Icon(
                 Icons.home,
-                color: Colors.white,
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.notifications,
-                color: Colors.white,
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.person,
-                color: Colors.white,
               ),
               label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.add,
-                color: Colors.white,
-              ),
-              label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: ''),
         ],
       ),
       appBar: AppBar(),
