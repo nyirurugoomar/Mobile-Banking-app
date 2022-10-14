@@ -5,6 +5,7 @@ class IntroPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[800],
       body: Center(
         child: Column(
           children: [
@@ -19,7 +20,7 @@ class IntroPage2 extends StatelessWidget {
             Text(
               'Product Monitor ',
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
