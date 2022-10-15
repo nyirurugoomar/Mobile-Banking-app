@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:introduction_app/intro_screens/intro_page_1.dart';
 import 'package:introduction_app/intro_screens/intro_page_2.dart';
@@ -36,70 +38,69 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               IntroPage1(),
               IntroPage2(),
               IntroPage3(),
-              LoginPage(),
             ],
           ),
 
-          SmoothPageIndicator(controller: _controller, count: 4)
-
           //dot indicator
-          // Container(
-          //   alignment: Alignment(0, 0.75),
-          //   child: Row(
-          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //     children: [
-          //       // skip
-          //       // GestureDetector(
-          //       //   onTap: () {
-          //       //     _controller.jumpToPage(2);
-          //       //   },
-          //       //   child: Text(
-          //       //     'Skip',
-          //       //     style: TextStyle(
-          //       //       color: Colors.white,
-          //       //     ),
-          //       //   ),
-          //       // ),
+          Container(
+            alignment: Alignment(0, 0.75),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // skip
+                // GestureDetector(
+                //   onTap: () {
+                //     _controller.jumpToPage(2);
+                //   },
+                //   child: Text(
+                //     'Skip',
+                //     style: TextStyle(
+                //       color: Colors.white,
+                //     ),
+                //   ),
+                // ),
 
-          //       //dot indicator
-          //       SmoothPageIndicator(controller: _controller, count: 4),
+                //dot indicator
+                // SmoothPageIndicator(controller: _controller, count: 3),
 
-          //       // next or done
-          //       onLastPage
-          //           ? GestureDetector(
-          //               onTap: () {
-          //                 Navigator.push(
-          //                   context,
-          //                   MaterialPageRoute(
-          //                     builder: (context) {
-          //                       return LoginPage();
-          //                     },
-          //                   ),
-          //                 );
-          //               },
-          //               child: Text(
-          //                 'Done',
-          //                 style: TextStyle(
-          //                   color: Colors.white,
-          //                 ),
-          //               ),
-          //             )
-          //           : GestureDetector(
-          //               onTap: () {
-          //                 _controller.nextPage(
-          //                     duration: Duration(milliseconds: 500),
-          //                     curve: Curves.easeIn);
-          //               },
-          //               child: Text(
-          //                 'Next',
-          //                 style: TextStyle(
-          //                   color: Colors.white,
-          //                 ),
-          //               ),
-          //             ),
-          //     ],
-          //   ),
-          // ),
+                // next or done
+                onLastPage
+                    ? GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return LoginPage();
+                              },
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Done',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 20,
+                          ),
+                        ),
+                      )
+                    : GestureDetector(
+                        onTap: () {
+                          _controller.nextPage(
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.easeIn);
+                        },
+                        child: Text(
+                          '',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+              ],
+            ),
+          ),
         ],
       ),
     );
